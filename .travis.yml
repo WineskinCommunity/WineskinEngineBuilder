@@ -7,6 +7,6 @@ before_script:
 script:
   - set -o pipefail
   - swift test
-  - swift run wsenginebuild --help
+  - swift run wsenginebuild
   - swift package generate-xcodeproj
   - swift build --configuration release --static-swift-stdlib

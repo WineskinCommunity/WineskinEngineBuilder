@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "AppFolder",
+        "repositoryURL": "https://github.com/dreymonde/AppFolder.git",
+        "state": {
+          "branch": null,
+          "revision": "17fff5281ef3ad6eb3be04a447d169975aa552e0",
+          "version": "0.2.0"
+        }
+      },
+      {
         "package": "Commander",
         "repositoryURL": "https://github.com/kylef/Commander.git",
         "state": {
           "branch": null,
           "revision": "e5b50ad7b2e91eeb828393e89b03577b16be7db9",
           "version": "0.8.0"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "526d5e91569b30857d8def9ea22ad7265b70d238",
+          "version": "0.9.0"
         }
       },
       {

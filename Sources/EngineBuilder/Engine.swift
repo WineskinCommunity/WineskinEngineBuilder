@@ -16,6 +16,10 @@ public struct Engine: Codable {
     public var homepage: URL
     public var sources: [Source]
     
+    public func binary(arch: [Source.Arch] = [.i386, .x86_64]) -> Source? {
+        return sources.filter { $0.arch == arch }.first
+    }
+    
     public struct Source: Codable {
         public var url: URL
         public var sha256: String

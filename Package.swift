@@ -10,13 +10,12 @@ let package = Package(
         .executable(name: "wsenginebuild", targets: ["wsenginebuild"]),
         ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
     ],
     targets: [
         .target(
             name: "wsenginebuild",
-            dependencies: ["EngineBuilder"]
+            dependencies: ["EngineBuilder", "Commander"]
         ),
         .target(name: "EngineBuilder"),
         .testTarget(name: "EngineBuilderTests", dependencies: ["EngineBuilder"]),

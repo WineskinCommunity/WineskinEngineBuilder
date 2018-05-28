@@ -43,19 +43,23 @@ class EngineBuilderTests: XCTestCase {
     
     func testParsing() {
         let data = EngineBuilderTests.exampleEngineJsonString.data(using: .utf8)!
-        let engineBuilder = try! EngineBuilder(engineListData: data)
+        let engineBuilder = try! EngineManager(engineListData: data)
         engineBuilder.printAvailableEngines()
     }
     
     func testBuildEngine() {
         let data = EngineBuilderTests.exampleEngineJsonString.data(using: .utf8)!
-        let engineBuilder = try! EngineBuilder(engineListData: data)
+        let engineBuilder = try! EngineManager(engineListData: data)
         let expectation = self.expectation(description: "Build")
-        engineBuilder.buildEngine(engineName: "WS9Wine3.0.1", completion: { (engine, error) in
-            XCTAssertNotNil(engine)
-            XCTAssertNil(error)
-            expectation.fulfill()
-        })
+        engineBuilder.buildEngine(engineName: "WS9Wine3.0.1", outputDirectory: "") { (result) in
+            switch result {
+                
+            case .success(let engine, let url):
+                expectation.fulfill()
+            case .failure(let error):
+                XCTFail("Could not build engine \(error)")
+            }
+        }
         waitForExpectations(timeout: 30) { (error) in
             if let error = error {
                 print("Test timeout: \(String(describing: error))")

@@ -10,7 +10,7 @@ command(
 
 ) { (engines, outDir, buildEngine, listEngines, installedEngines) in
     do {
-        let engineBuilder = try EngineBuilder(engineListPath: engines)
+        let engineBuilder = try EngineManager(engineListPath: engines)
         if listEngines {
             engineBuilder.printAvailableEngines()
             return
@@ -20,7 +20,15 @@ command(
             return
         }
         if buildEngine.count > 0 {
-            try engineBuilder.buildEngine(engineName: buildEngine, outputDirectory: outDir)
+            engineBuilder.buildEngine(engineName: buildEngine, outputDirectory: outDir, { (result) in
+                switch result {
+                    
+                case .success(_, _):
+                    break
+                case .failure(let error):
+                    break
+                }
+            })
         }
     } catch {
         print("Error: \(error)")

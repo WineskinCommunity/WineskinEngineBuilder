@@ -12,7 +12,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
         .package(url: "https://github.com/dreymonde/AppFolder.git", from: "0.2.0"),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "0.9.0"))
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "0.9.0")),
+        .package(url: "https://github.com/IBM-Swift/CommonCrypto.git", from: "1.0.0"),
     ],
     targets: [
         .target(
@@ -21,7 +22,7 @@ let package = Package(
         ),
         .target(
             name: "EngineBuilder",
-            dependencies: ["AppFolder", "CryptoSwift"]
+            dependencies: ["AppFolder", "CryptoSwift", "CommonCrypto"]
         ),
         .testTarget(name: "EngineBuilderTests", dependencies: ["EngineBuilder"]),
     ]

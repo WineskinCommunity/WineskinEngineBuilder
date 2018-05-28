@@ -1,12 +1,13 @@
 osx_image: xcode9.3
 language: objective-c
 
-before_script:
-  - swift build
+install:
+  - brew install p7zip
 
 script:
-  - set -o pipefail
+  - swift build
   - swift test
   - swift run wsenginebuild
   - swift package generate-xcodeproj
   - swift build --configuration release --static-swift-stdlib
+  - swift run wsenginebuild --buildEngine WS9Wine3.0.1

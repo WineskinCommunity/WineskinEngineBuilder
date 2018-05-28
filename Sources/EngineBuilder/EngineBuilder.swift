@@ -93,7 +93,9 @@ public final class EngineBuilder {
                     let wsWineBundle = try sself.createWswineBundle(usrDir: usrDir)
                     let tarArchive = try sself.createTarArchive(wswineBundle: wsWineBundle)
                     let enginePath = try sself.create7zipArchive(tarArchive: tarArchive)
-                    completion(.success((sself.engine, enginePath)))
+                    let outEnginePath = sself.outputDirectory.appendingPathComponent(enginePath.lastPathComponent)
+                    try FileManager.default.copyItem(at: enginePath, to: outEnginePath)
+                    completion(.success((sself.engine, outEnginePath)))
                 } catch {
                     completion(.failure(error))
                 }

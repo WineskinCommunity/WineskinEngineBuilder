@@ -5,10 +5,23 @@
 Tool for automating the creation of Wineskin Engines.
 
 ### Quick Start
+ 
+Install p7zip with Homebrew
+
+```
+$ brew install p7zip
+```
+
+Checkout the source:
 
 ```
 $ git clone https://github.com/WineskinCommunity/WineskinEngineBuilder.git
 $ cd WineskinEngineBuilder
+```
+
+Show usage:
+
+```
 $ swift run wsenginebuild --help
 ```
 

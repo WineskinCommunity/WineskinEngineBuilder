@@ -1,5 +1,6 @@
 import Commander
 import EngineBuilder
+import Foundation
 
 command(
     Option("engines", default: "engines.json", description: "Path to engines.json"),
@@ -20,12 +21,17 @@ command(
             return
         }
         if buildEngine.count > 0 {
+            var outDir = outDir
+            if outDir.count == 0 {
+                outDir = FileManager.default.currentDirectoryPath
+            }
             engineBuilder.buildEngine(engineName: buildEngine, outputDirectory: outDir, { (result) in
                 switch result {
-                    
-                case .success(_, _):
+                case .success(let engine, let url):
+                    print("Engine \(engine.name) built at \(url)")
                     break
                 case .failure(let error):
+                    print("Error building \(buildEngine) \(error)")
                     break
                 }
             })

@@ -14,6 +14,7 @@ let package = Package(
         .package(url: "https://github.com/dreymonde/AppFolder.git", from: "0.2.0"),
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "0.9.0")),
         .package(url: "https://github.com/IBM-Swift/CommonCrypto.git", from: "1.0.0"),
+        //.package(url: "https://github.com/WineskinCommunity/p7zip-swift.git", .branch("master")),
     ],
     targets: [
         .target(

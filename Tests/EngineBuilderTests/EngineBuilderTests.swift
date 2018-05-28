@@ -53,8 +53,8 @@ class EngineBuilderTests: XCTestCase {
         let expectation = self.expectation(description: "Build")
         engineBuilder.buildEngine(engineName: "WS9Wine3.0.1", outputDirectory: "") { (result) in
             switch result {
-                
             case .success(let engine, let url):
+                print("Engine \(engine.name) built at \(url)")
                 expectation.fulfill()
             case .failure(let error):
                 XCTFail("Could not build engine \(error)")

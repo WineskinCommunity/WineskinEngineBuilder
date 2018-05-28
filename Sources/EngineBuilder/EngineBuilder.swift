@@ -135,6 +135,7 @@ public final class EngineBuilder {
     
     
     private func createWswineBundle(usrDir: URL) throws -> URL {
+        print("Creating wswine.bundle...")
         let versionFileName = "version"
         let versionPath = usrDir.appendingPathComponent(versionFileName)
         try engine.name.write(to: versionPath, atomically: true, encoding: .utf8)
@@ -148,10 +149,15 @@ public final class EngineBuilder {
         let destinationDirectory = self.tempDirectory
         let outArchiveName = "\(engine.name).tar"
         let outArchive = destinationDirectory.appendingPathComponent(outArchiveName)
+        print("Creating tar archive \(outArchive)"...)
+
+        //-C /path/to/folder
+        // tar -C /path/to/folder -cvjf /path/for/acrhive.tar.bz2 source
         
+
         let process = Process()
         process.launchPath = "/usr/bin/tar"
-        process.arguments = ["-cf", outArchive.path, wswineBundle.path]
+        process.arguments = ["-C", destinationDirectory.path, "-cf", outArchive.path, wswineBundle.lastPathComponent]
         
         let errPipe = Pipe()
         process.standardError = errPipe
@@ -175,7 +181,7 @@ public final class EngineBuilder {
     
     private func create7zipArchive(tarArchive: URL) throws -> URL {
         let destinationDirectory = self.tempDirectory
-        let outArchiveName = "\(engine.name).7z"
+        let outArchiveName = "\(engine.name).tar.7z"
         let outArchive = destinationDirectory.appendingPathComponent(outArchiveName)
         
         let p7zipPath = "/usr/local/bin/7za"

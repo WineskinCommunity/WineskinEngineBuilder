@@ -49,7 +49,10 @@ public final class EngineManager {
     
     // MARK: - Public Methods
     
-    public func buildEngine(engineName: String, outputDirectory: String = "", _ completion: @escaping BuildCompletion) {
+    public func buildEngine(engineName: String,
+                            outputDirectory: String = "",
+                            p7zip: URL,
+                            _ completion: @escaping BuildCompletion) {
         print("Building engine \(engineName)...")
         let matches = engineList.engines.filter { $0.name == engineName }
         guard let engine = matches.first else {
@@ -58,7 +61,7 @@ public final class EngineManager {
         }
         let outURL = URL(fileURLWithPath: outputDirectory)
         do {
-            let builder = try EngineBuilder(engine: engine, outputDirectory: outURL)
+            let builder = try EngineBuilder(engine: engine, outputDirectory: outURL, p7zip: p7zip)
             builder.build(completion)
         } catch {
             completion(.failure(error))

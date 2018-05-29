@@ -27,7 +27,7 @@ public enum BuildError: Error {
 }
 
 /// URL is path to built engine
-public typealias BuildResult = Result<(Engine, URL)>
+public typealias BuildResult = Result<ArchivedEngine>
 public typealias BuildCompletion = (BuildResult)->Void
 /// URL is to path of downloaded Source URL resource
 private typealias DownloadResult = Result<(URL)>
@@ -43,15 +43,23 @@ public final class EngineBuilder {
     private let sourceType: Engine.Source.SourceType = .binaryWineHQ
     private let arch: [Engine.Source.Arch] = [.i386, .x86_64]
     private let tempDirectory: URL
+    /// path to 7za binary
+    private let p7zip: URL
     
     deinit {
         cleanup()
     }
     
     public init(engine: Engine,
-                outputDirectory: URL) throws {
+                outputDirectory: URL,
+                p7zip: URL) throws {
         self.engine = engine
         self.outputDirectory = outputDirectory
+        self.p7zip = p7zip
+        
+        guard FileManager.default.fileExists(atPath: p7zip.path) else {
+            throw BuildError.p7zipNotInstalled
+        }
         
         if !FileManager.default.fileExists(atPath: outputDirectory.path) {
             try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
@@ -95,7 +103,8 @@ public final class EngineBuilder {
                     let enginePath = try sself.create7zipArchive(tarArchive: tarArchive)
                     let outEnginePath = sself.outputDirectory.appendingPathComponent(enginePath.lastPathComponent)
                     try FileManager.default.copyItem(at: enginePath, to: outEnginePath)
-                    completion(.success((sself.engine, outEnginePath)))
+                    let archivedEngine = try ArchivedEngine(url: outEnginePath)
+                    completion(.success(archivedEngine))
                 } catch {
                     completion(.failure(error))
                 }
@@ -153,10 +162,6 @@ public final class EngineBuilder {
         let outArchive = destinationDirectory.appendingPathComponent(outArchiveName)
         print("Creating tar archive \(outArchive)"...)
 
-        //-C /path/to/folder
-        // tar -C /path/to/folder -cvjf /path/for/acrhive.tar.bz2 source
-        
-
         let process = Process()
         process.launchPath = "/usr/bin/tar"
         process.arguments = ["-C", destinationDirectory.path, "-cf", outArchive.path, wswineBundle.lastPathComponent]
@@ -186,7 +191,7 @@ public final class EngineBuilder {
         let outArchiveName = "\(engine.name).tar.7z"
         let outArchive = destinationDirectory.appendingPathComponent(outArchiveName)
         
-        let p7zipPath = "/usr/local/bin/7za"
+        let p7zipPath = p7zip.path
         guard FileManager.default.fileExists(atPath: p7zipPath) else {
             throw BuildError.p7zipNotInstalled
         }

@@ -44,9 +44,10 @@ extension Engine: ConsolePrintable {
 extension ArchivedEngine: ConsolePrintable {
     public var consoleDescription: String {
         var desc = ""
-        desc += "Name: \(name)\n"
+        desc += "\(name)\n"
         desc += " - \(url.path)\n"
         desc += "   SHA256: \(sha256)\n"
+        desc += "   Created: \(created)\n"
         return desc
     }
 }

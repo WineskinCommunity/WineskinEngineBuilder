@@ -62,7 +62,10 @@ Group {
             let engineBuilder = try EngineManager(engineListPath: engines)
             if installed {
                 print("Installed Engines:\n")
-                // TODO
+                let engines = try engineBuilder.installedEngines()
+                engines.forEach {
+                    print($0.consoleDescription)
+                }
             } else {
                 print("Available Engines:\n")
                 engineBuilder.engines.forEach {

@@ -13,6 +13,7 @@ public enum EngineError: Error {
     case badEngineList
     case engineNotFound
     case buildError
+    case cannotFindInstalledEngines
 }
 
 public final class EngineManager {
@@ -47,6 +48,29 @@ public final class EngineManager {
         return matches.first
     }
     
+    public func installedEngines() throws -> [ArchivedEngine] {
+        let wineskin = AppFolder.Library.Application_Support.Wineskin.url
+        let enginesDir = wineskin.appendingPathComponent("Engines")
+        guard FileManager.default.fileExists(atPath: enginesDir.path) else {
+            throw EngineError.cannotFindInstalledEngines
+        }
+        let fileURLs = try FileManager.default.contentsOfDirectory(at: enginesDir, includingPropertiesForKeys: nil)
+        
+        var engines: [ArchivedEngine] = []
+        fileURLs.forEach {
+            guard $0.pathExtension == "7z" else {
+                return
+            }
+            do {
+                let engine = try ArchivedEngine(url: $0)
+                engines.append(engine)
+            } catch {
+                print("Bad engine: \($0)")
+            }
+        }
+        return engines
+    }
+    
     // MARK: - Public Methods
     
     public func buildEngine(engineName: String,
@@ -73,3 +97,12 @@ public final class EngineManager {
 }
 
 
+extension Library.Application_Support {
+    
+    final class Wineskin : Directory { }
+    
+    var Wineskin: Wineskin {
+        return subdirectory()
+    }
+    
+}

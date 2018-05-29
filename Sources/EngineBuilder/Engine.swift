@@ -41,6 +41,7 @@ public struct ArchivedEngine {
     public var name: String
     public var url: URL
     public var sha256: String
+    public var created: Date
     
     public init(url: URL, sha256: String? = nil) throws {
         self.url = url
@@ -52,6 +53,9 @@ public struct ArchivedEngine {
             let digest = try url.sha256Digest()
             self.sha256 = digest.toHexString()
         }
+        let attr = try FileManager.default.attributesOfItem(atPath: url.path)
+        let created = attr[FileAttributeKey.creationDate] as? Date
+        self.created = created ?? Date()
     }
 }
 

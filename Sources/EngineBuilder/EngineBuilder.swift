@@ -289,15 +289,6 @@ public final class EngineBuilder {
 }
 
 
-extension Library.Application_Support {
-    
-    final class Wineskin : Directory { }
-    
-    var Wineskin: Wineskin {
-        return subdirectory()
-    }
-    
-}
 
 extension Library.Caches {
     

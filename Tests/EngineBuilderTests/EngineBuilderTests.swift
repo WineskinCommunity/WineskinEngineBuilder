@@ -66,7 +66,7 @@ class EngineBuilderTests: XCTestCase {
             }
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 30) { (error) in
+        waitForExpectations(timeout: 300) { (error) in
             if let error = error {
                 print("Test timeout: \(String(describing: error))")
             }

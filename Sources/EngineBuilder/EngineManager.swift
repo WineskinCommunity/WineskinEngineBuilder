@@ -16,7 +16,11 @@ public enum EngineError: Error {
 }
 
 public final class EngineManager {
+    // MARK: - Private Properties
+    
     private let engineList: EngineList
+    
+    // MARK: - Init
     
     public convenience init(engineListPath: String) throws {
         let fileURL = URL(fileURLWithPath: engineListPath)
@@ -28,6 +32,22 @@ public final class EngineManager {
         let decoder = JSONDecoder()
         self.engineList = try decoder.decode(EngineList.self, from: engineListData)
     }
+    
+    // MARK: - Public Accessors
+    
+    public var engines: [Engine] {
+        return engineList.engines
+    }
+    
+    public func engineForName(_ name: String) -> Engine? {
+        let matches = engines.filter { $0.name == name }
+        if matches.count > 1 {
+            print("Warning: More than one engine matching \(name): \(matches)")
+        }
+        return matches.first
+    }
+    
+    // MARK: - Public Methods
     
     public func buildEngine(engineName: String, outputDirectory: String = "", _ completion: @escaping BuildCompletion) {
         print("Building engine \(engineName)...")
@@ -46,15 +66,7 @@ public final class EngineManager {
         }
     }
     
-    public func printAvailableEngines() {
-        print("Available engines:")
-        engineList.engines.forEach { print($0) }
-    }
-    
-    public func printInstalledEngines() {
-        print("Installed engines:")
-        
-    }
+    // MARK: - Private Methods
 }
 
 

@@ -35,3 +35,23 @@ public struct Engine: Codable {
         }
     }
 }
+
+/// Represents packaged engine ready for installation
+public struct ArchivedEngine {
+    public var name: String
+    public var url: URL
+    public var sha256: String
+    
+    public init(url: URL, sha256: String? = nil) throws {
+        self.url = url
+        // normally path ends in .tar.7z
+        self.name = url.deletingPathExtension().deletingPathExtension().lastPathComponent
+        if let sha256 = sha256 {
+            self.sha256 = sha256
+        } else {
+            let digest = try url.sha256Digest()
+            self.sha256 = digest.toHexString()
+        }
+    }
+}
+

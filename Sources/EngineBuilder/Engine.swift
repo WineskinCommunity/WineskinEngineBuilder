@@ -59,3 +59,8 @@ public struct ArchivedEngine {
     }
 }
 
+extension Data {
+    func toHexString() -> String {
+        return reduce("") {$0 + String(format: "%02x", $1)}
+    }
+}

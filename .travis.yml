@@ -3,6 +3,7 @@ language: objective-c
 
 install:
   - brew install p7zip
+  - carthage update --cache-builds --platform mac
 
 script:
   - swift build
@@ -10,3 +11,4 @@ script:
   - swift run wsenginebuild build WS9Wine3.0.1
   - swift package generate-xcodeproj
   - swift build --configuration release --static-swift-stdlib
+  - xcodebuild -project WineskinEngines.xcodeproj -scheme WineskinEngines build

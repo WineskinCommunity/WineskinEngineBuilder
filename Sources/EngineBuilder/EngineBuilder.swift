@@ -7,7 +7,6 @@
 
 import Foundation
 import AppFolder
-import CryptoSwift
 import CommonCrypto
 
 public enum Result<T> {
@@ -273,9 +272,9 @@ public final class EngineBuilder {
         print("Running checksum of \(fileURL), expecting \(sha256)")
         do {
             let digest = try SHA256(url: fileURL)
-            let expected = Data(hex: sha256)
+            let expected = sha256
             let digestHex = digest.toHexString()
-            if digest == expected {
+            if digestHex == expected {
                 print("Checksum match: \(fileURL) \(digestHex)")
                 completion(.success((fileURL, digestHex)))
             } else {

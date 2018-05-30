@@ -48,7 +48,19 @@ This will build a statically linked `wsenginebuild` command line binary suitable
 $ swift build --configuration release --static-swift-stdlib
 ```
 
-### Engine List
+## WineskinEngines
+
+This is a macOS app with some of the same functionality as the command line tool.
+
+```
+$ carthage update --cache-builds --platform mac
+```
+
+```
+$ xcodebuild -project WineskinEngines.xcodeproj -scheme WineskinEngines build
+```
+
+## Engine List
 
 `engines.json`
 

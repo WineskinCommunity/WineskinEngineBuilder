@@ -1,0 +1,1167 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D90CA92820BE67F500E5E61C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA92720BE67F500E5E61C /* AppDelegate.swift */; };
+		D90CA92A20BE67F500E5E61C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA92920BE67F500E5E61C /* ViewController.swift */; };
+		D90CA92C20BE67F600E5E61C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90CA92B20BE67F600E5E61C /* Assets.xcassets */; };
+		D90CA92F20BE67F600E5E61C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90CA92D20BE67F600E5E61C /* Main.storyboard */; };
+		D90CA94320BE683700E5E61C /* EngineBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90CA93A20BE683700E5E61C /* EngineBuilder.framework */; };
+		D90CA94F20BE683700E5E61C /* EngineBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90CA93A20BE683700E5E61C /* EngineBuilder.framework */; };
+		D90CA95020BE683700E5E61C /* EngineBuilder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D90CA93A20BE683700E5E61C /* EngineBuilder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D90CA96020BE688600E5E61C /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA95920BE688600E5E61C /* SHA256.swift */; };
+		D90CA96120BE688600E5E61C /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA95A20BE688600E5E61C /* Engine.swift */; };
+		D90CA96220BE688600E5E61C /* EngineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA95B20BE688600E5E61C /* EngineManager.swift */; };
+		D90CA96320BE688600E5E61C /* EngineBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA95C20BE688600E5E61C /* EngineBuilder.swift */; };
+		D90CA96420BE688600E5E61C /* EngineBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D90CA95D20BE688600E5E61C /* EngineBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D90CA96620BE688600E5E61C /* ConsolePrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA95F20BE688600E5E61C /* ConsolePrintable.swift */; };
+		D90CA96A20BE690B00E5E61C /* EngineBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CA96820BE690B00E5E61C /* EngineBuilderTests.swift */; };
+		D90CA99820BE6A8300E5E61C /* AppFolder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90CA97920BE6A4100E5E61C /* AppFolder.framework */; };
+		D90CA99920BE6A8700E5E61C /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90CA98C20BE6A4700E5E61C /* CommonCrypto.framework */; };
+		D90CA99E20BE6CC700E5E61C /* engines.json in Resources */ = {isa = PBXBuildFile; fileRef = D90CA99D20BE6CC600E5E61C /* engines.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90CA94420BE683700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA91A20BE658800E5E61C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90CA93920BE683700E5E61C;
+			remoteInfo = EngineBuilder;
+		};
+		D90CA94620BE683700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA91A20BE658800E5E61C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90CA92320BE67F500E5E61C;
+			remoteInfo = WineskinEngines;
+		};
+		D90CA94D20BE683700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA91A20BE658800E5E61C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90CA93920BE683700E5E61C;
+			remoteInfo = EngineBuilder;
+		};
+		D90CA97620BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D97C1BEFF229002C0205;
+			remoteInfo = "AppFolder-iOS";
+		};
+		D90CA97820BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6DA0F1BF000BD002C0205;
+			remoteInfo = "AppFolder-macOS";
+		};
+		D90CA97A20BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9E21BEFFF6E002C0205;
+			remoteInfo = "AppFolder-watchOS";
+		};
+		D90CA97C20BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9F01BEFFFBE002C0205;
+			remoteInfo = "AppFolder-tvOS";
+		};
+		D90CA97E20BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9861BEFF229002C0205;
+			remoteInfo = "AppFolder-iOS Tests";
+		};
+		D90CA98020BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75027A1C68FCFC006590AF;
+			remoteInfo = "AppFolder-macOS Tests";
+		};
+		D90CA98220BE6A4100E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75028D1C690C7A006590AF;
+			remoteInfo = "AppFolder-tvOS Tests";
+		};
+		D90CA98B20BE6A4700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 211216831AE68D26004E1CE6;
+			remoteInfo = "CommonCrypto-macOS";
+		};
+		D90CA98D20BE6A4700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 216CAE341AE6B273009A69EF;
+			remoteInfo = "CommonCrypto-iOS";
+		};
+		D90CA98F20BE6A4700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 804503281BA209F6002A5470;
+			remoteInfo = "CommonCrypto-watchOS";
+		};
+		D90CA99120BE6A4700E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80098A511C12E5890029C530;
+			remoteInfo = "CommonCrypto-tvOS";
+		};
+		D90CA99320BE6A7300E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 211216821AE68D26004E1CE6;
+			remoteInfo = "CommonCrypto-macOS";
+		};
+		D90CA99520BE6A7600E5E61C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 52D6DA0E1BF000BD002C0205;
+			remoteInfo = "AppFolder-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D90CA95420BE683700E5E61C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D90CA95020BE683700E5E61C /* EngineBuilder.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D90CA92420BE67F500E5E61C /* WineskinEngines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineskinEngines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90CA92720BE67F500E5E61C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D90CA92920BE67F500E5E61C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90CA92B20BE67F600E5E61C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D90CA92E20BE67F600E5E61C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90CA93020BE67F600E5E61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90CA93120BE67F600E5E61C /* WineskinEngines.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WineskinEngines.entitlements; sourceTree = "<group>"; };
+		D90CA93A20BE683700E5E61C /* EngineBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EngineBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90CA94220BE683700E5E61C /* EngineBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90CA95920BE688600E5E61C /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
+		D90CA95A20BE688600E5E61C /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		D90CA95B20BE688600E5E61C /* EngineManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineManager.swift; sourceTree = "<group>"; };
+		D90CA95C20BE688600E5E61C /* EngineBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineBuilder.swift; sourceTree = "<group>"; };
+		D90CA95D20BE688600E5E61C /* EngineBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineBuilder.h; sourceTree = "<group>"; };
+		D90CA95E20BE688600E5E61C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90CA95F20BE688600E5E61C /* ConsolePrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsolePrintable.swift; sourceTree = "<group>"; };
+		D90CA96820BE690B00E5E61C /* EngineBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineBuilderTests.swift; sourceTree = "<group>"; };
+		D90CA96920BE690B00E5E61C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppFolder.xcodeproj; path = Carthage/Checkouts/AppFolder/AppFolder.xcodeproj; sourceTree = "<group>"; };
+		D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonCrypto.xcodeproj; path = Carthage/Checkouts/CommonCrypto/CommonCrypto.xcodeproj; sourceTree = "<group>"; };
+		D90CA99D20BE6CC600E5E61C /* engines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = engines.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90CA92120BE67F500E5E61C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA94F20BE683700E5E61C /* EngineBuilder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA93620BE683700E5E61C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA99920BE6A8700E5E61C /* CommonCrypto.framework in Frameworks */,
+				D90CA99820BE6A8300E5E61C /* AppFolder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA93F20BE683700E5E61C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA94320BE683700E5E61C /* EngineBuilder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D90CA91920BE658800E5E61C = {
+			isa = PBXGroup;
+			children = (
+				D90CA99C20BE6CB700E5E61C /* Resources */,
+				D90CA99B20BE6BAF00E5E61C /* Dependencies */,
+				D90CA92620BE67F500E5E61C /* WineskinEngines */,
+				D90CA95820BE688600E5E61C /* EngineBuilder */,
+				D90CA96720BE690B00E5E61C /* EngineBuilderTests */,
+				D90CA92520BE67F500E5E61C /* Products */,
+				D90CA99720BE6A8300E5E61C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D90CA92520BE67F500E5E61C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA92420BE67F500E5E61C /* WineskinEngines.app */,
+				D90CA93A20BE683700E5E61C /* EngineBuilder.framework */,
+				D90CA94220BE683700E5E61C /* EngineBuilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90CA92620BE67F500E5E61C /* WineskinEngines */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA92720BE67F500E5E61C /* AppDelegate.swift */,
+				D90CA92920BE67F500E5E61C /* ViewController.swift */,
+				D90CA92B20BE67F600E5E61C /* Assets.xcassets */,
+				D90CA92D20BE67F600E5E61C /* Main.storyboard */,
+				D90CA93020BE67F600E5E61C /* Info.plist */,
+				D90CA93120BE67F600E5E61C /* WineskinEngines.entitlements */,
+			);
+			path = WineskinEngines;
+			sourceTree = "<group>";
+		};
+		D90CA95820BE688600E5E61C /* EngineBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA95920BE688600E5E61C /* SHA256.swift */,
+				D90CA95A20BE688600E5E61C /* Engine.swift */,
+				D90CA95B20BE688600E5E61C /* EngineManager.swift */,
+				D90CA95C20BE688600E5E61C /* EngineBuilder.swift */,
+				D90CA95D20BE688600E5E61C /* EngineBuilder.h */,
+				D90CA95E20BE688600E5E61C /* Info.plist */,
+				D90CA95F20BE688600E5E61C /* ConsolePrintable.swift */,
+			);
+			name = EngineBuilder;
+			path = Sources/EngineBuilder;
+			sourceTree = "<group>";
+		};
+		D90CA96720BE690B00E5E61C /* EngineBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA96820BE690B00E5E61C /* EngineBuilderTests.swift */,
+				D90CA96920BE690B00E5E61C /* Info.plist */,
+			);
+			name = EngineBuilderTests;
+			path = Tests/EngineBuilderTests;
+			sourceTree = "<group>";
+		};
+		D90CA96D20BE6A4100E5E61C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA97720BE6A4100E5E61C /* AppFolder.framework */,
+				D90CA97920BE6A4100E5E61C /* AppFolder.framework */,
+				D90CA97B20BE6A4100E5E61C /* AppFolder.framework */,
+				D90CA97D20BE6A4100E5E61C /* AppFolder.framework */,
+				D90CA97F20BE6A4100E5E61C /* AppFolder_Tests.xctest */,
+				D90CA98120BE6A4100E5E61C /* AppFolder_Tests.xctest */,
+				D90CA98320BE6A4100E5E61C /* AppFolder_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90CA98520BE6A4700E5E61C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA98C20BE6A4700E5E61C /* CommonCrypto.framework */,
+				D90CA98E20BE6A4700E5E61C /* CommonCrypto.framework */,
+				D90CA99020BE6A4700E5E61C /* CommonCrypto.framework */,
+				D90CA99220BE6A4700E5E61C /* CommonCrypto.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90CA99720BE6A8300E5E61C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D90CA99B20BE6BAF00E5E61C /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */,
+				D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		D90CA99C20BE6CB700E5E61C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D90CA99D20BE6CC600E5E61C /* engines.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D90CA93720BE683700E5E61C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA96420BE688600E5E61C /* EngineBuilder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D90CA92320BE67F500E5E61C /* WineskinEngines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90CA93420BE67F600E5E61C /* Build configuration list for PBXNativeTarget "WineskinEngines" */;
+			buildPhases = (
+				D90CA92020BE67F500E5E61C /* Sources */,
+				D90CA92120BE67F500E5E61C /* Frameworks */,
+				D90CA92220BE67F500E5E61C /* Resources */,
+				D90CA95420BE683700E5E61C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90CA94E20BE683700E5E61C /* PBXTargetDependency */,
+			);
+			name = WineskinEngines;
+			productName = WineskinEngines;
+			productReference = D90CA92420BE67F500E5E61C /* WineskinEngines.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90CA93920BE683700E5E61C /* EngineBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90CA95120BE683700E5E61C /* Build configuration list for PBXNativeTarget "EngineBuilder" */;
+			buildPhases = (
+				D90CA93520BE683700E5E61C /* Sources */,
+				D90CA93620BE683700E5E61C /* Frameworks */,
+				D90CA93720BE683700E5E61C /* Headers */,
+				D90CA93820BE683700E5E61C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90CA99620BE6A7600E5E61C /* PBXTargetDependency */,
+				D90CA99420BE6A7300E5E61C /* PBXTargetDependency */,
+			);
+			name = EngineBuilder;
+			productName = EngineBuilder;
+			productReference = D90CA93A20BE683700E5E61C /* EngineBuilder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D90CA94120BE683700E5E61C /* EngineBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90CA95520BE683700E5E61C /* Build configuration list for PBXNativeTarget "EngineBuilderTests" */;
+			buildPhases = (
+				D90CA93E20BE683700E5E61C /* Sources */,
+				D90CA93F20BE683700E5E61C /* Frameworks */,
+				D90CA94020BE683700E5E61C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90CA94520BE683700E5E61C /* PBXTargetDependency */,
+				D90CA94720BE683700E5E61C /* PBXTargetDependency */,
+			);
+			name = EngineBuilderTests;
+			productName = EngineBuilderTests;
+			productReference = D90CA94220BE683700E5E61C /* EngineBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90CA91A20BE658800E5E61C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					D90CA92320BE67F500E5E61C = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					D90CA93920BE683700E5E61C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					D90CA94120BE683700E5E61C = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = D90CA92320BE67F500E5E61C;
+					};
+				};
+			};
+			buildConfigurationList = D90CA91D20BE658800E5E61C /* Build configuration list for PBXProject "WineskinEngines" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90CA91920BE658800E5E61C;
+			productRefGroup = D90CA92520BE67F500E5E61C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D90CA96D20BE6A4100E5E61C /* Products */;
+					ProjectRef = D90CA96C20BE6A4100E5E61C /* AppFolder.xcodeproj */;
+				},
+				{
+					ProductGroup = D90CA98520BE6A4700E5E61C /* Products */;
+					ProjectRef = D90CA98420BE6A4700E5E61C /* CommonCrypto.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D90CA92320BE67F500E5E61C /* WineskinEngines */,
+				D90CA93920BE683700E5E61C /* EngineBuilder */,
+				D90CA94120BE683700E5E61C /* EngineBuilderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D90CA97720BE6A4100E5E61C /* AppFolder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFolder.framework;
+			remoteRef = D90CA97620BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA97920BE6A4100E5E61C /* AppFolder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFolder.framework;
+			remoteRef = D90CA97820BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA97B20BE6A4100E5E61C /* AppFolder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFolder.framework;
+			remoteRef = D90CA97A20BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA97D20BE6A4100E5E61C /* AppFolder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppFolder.framework;
+			remoteRef = D90CA97C20BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA97F20BE6A4100E5E61C /* AppFolder_Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppFolder_Tests.xctest;
+			remoteRef = D90CA97E20BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA98120BE6A4100E5E61C /* AppFolder_Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppFolder_Tests.xctest;
+			remoteRef = D90CA98020BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA98320BE6A4100E5E61C /* AppFolder_Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppFolder_Tests.xctest;
+			remoteRef = D90CA98220BE6A4100E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA98C20BE6A4700E5E61C /* CommonCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCrypto.framework;
+			remoteRef = D90CA98B20BE6A4700E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA98E20BE6A4700E5E61C /* CommonCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCrypto.framework;
+			remoteRef = D90CA98D20BE6A4700E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA99020BE6A4700E5E61C /* CommonCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCrypto.framework;
+			remoteRef = D90CA98F20BE6A4700E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D90CA99220BE6A4700E5E61C /* CommonCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCrypto.framework;
+			remoteRef = D90CA99120BE6A4700E5E61C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90CA92220BE67F500E5E61C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA99E20BE6CC700E5E61C /* engines.json in Resources */,
+				D90CA92C20BE67F600E5E61C /* Assets.xcassets in Resources */,
+				D90CA92F20BE67F600E5E61C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA93820BE683700E5E61C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA94020BE683700E5E61C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90CA92020BE67F500E5E61C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA92A20BE67F500E5E61C /* ViewController.swift in Sources */,
+				D90CA92820BE67F500E5E61C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA93520BE683700E5E61C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA96020BE688600E5E61C /* SHA256.swift in Sources */,
+				D90CA96220BE688600E5E61C /* EngineManager.swift in Sources */,
+				D90CA96120BE688600E5E61C /* Engine.swift in Sources */,
+				D90CA96620BE688600E5E61C /* ConsolePrintable.swift in Sources */,
+				D90CA96320BE688600E5E61C /* EngineBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90CA93E20BE683700E5E61C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90CA96A20BE690B00E5E61C /* EngineBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90CA94520BE683700E5E61C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90CA93920BE683700E5E61C /* EngineBuilder */;
+			targetProxy = D90CA94420BE683700E5E61C /* PBXContainerItemProxy */;
+		};
+		D90CA94720BE683700E5E61C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90CA92320BE67F500E5E61C /* WineskinEngines */;
+			targetProxy = D90CA94620BE683700E5E61C /* PBXContainerItemProxy */;
+		};
+		D90CA94E20BE683700E5E61C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90CA93920BE683700E5E61C /* EngineBuilder */;
+			targetProxy = D90CA94D20BE683700E5E61C /* PBXContainerItemProxy */;
+		};
+		D90CA99420BE6A7300E5E61C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CommonCrypto-macOS";
+			targetProxy = D90CA99320BE6A7300E5E61C /* PBXContainerItemProxy */;
+		};
+		D90CA99620BE6A7600E5E61C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AppFolder-macOS";
+			targetProxy = D90CA99520BE6A7600E5E61C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90CA92D20BE67F600E5E61C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90CA92E20BE67F600E5E61C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90CA91E20BE658800E5E61C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		D90CA91F20BE658800E5E61C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		D90CA93220BE67F600E5E61C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = WineskinEngines/WineskinEngines.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WineskinEngines/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.WineskinEngines;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		D90CA93320BE67F600E5E61C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = WineskinEngines/WineskinEngines.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WineskinEngines/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.WineskinEngines;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		D90CA95220BE683700E5E61C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Sources/EngineBuilder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.EngineBuilder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D90CA95320BE683700E5E61C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Sources/EngineBuilder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.EngineBuilder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D90CA95620BE683700E5E61C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/EngineBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.EngineBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WineskinEngines.app/Contents/MacOS/WineskinEngines";
+			};
+			name = Debug;
+		};
+		D90CA95720BE683700E5E61C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/EngineBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = app.wineskin.EngineBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WineskinEngines.app/Contents/MacOS/WineskinEngines";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90CA91D20BE658800E5E61C /* Build configuration list for PBXProject "WineskinEngines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90CA91E20BE658800E5E61C /* Debug */,
+				D90CA91F20BE658800E5E61C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90CA93420BE67F600E5E61C /* Build configuration list for PBXNativeTarget "WineskinEngines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90CA93220BE67F600E5E61C /* Debug */,
+				D90CA93320BE67F600E5E61C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90CA95120BE683700E5E61C /* Build configuration list for PBXNativeTarget "EngineBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90CA95220BE683700E5E61C /* Debug */,
+				D90CA95320BE683700E5E61C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90CA95520BE683700E5E61C /* Build configuration list for PBXNativeTarget "EngineBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90CA95620BE683700E5E61C /* Debug */,
+				D90CA95720BE683700E5E61C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90CA91A20BE658800E5E61C /* Project object */;
+}
